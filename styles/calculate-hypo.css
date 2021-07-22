@@ -22,3 +22,18 @@
   text-align: center;
   padding: 0 6rem;
 }
+
+@media screen and (max-width: 1000px) {
+  .calculate-hypo-main {
+    flex-direction: column;
+    text-align: center;
+  }
+  .calculate-hypo-leftSection {
+    width: 100%;
+    padding: 0;
+  }
+
+  .calculate-hypo-rightSection p {
+    padding: 0;
+  }
+}

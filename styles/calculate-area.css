@@ -7,3 +7,14 @@
 .calculate-area-img {
   width: 600px;
 }
+
+@media screen and (max-width: 1000px) {
+  .calculate-area-main {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .calculate-area-img {
+    width: 300px;
+  }
+}
