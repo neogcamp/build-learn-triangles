@@ -1,0 +1,9 @@
+.calculate-area-main {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.calculate-area-img {
+  width: 600px;
+}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Angles of Triangles</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="../styles/angles-triangles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navigator">
+        <a href="../pages/calculate-area.html">&#60;</a>
+      </div>
+      <h1>Check whether angles form a triangle</h1>
+      <div class="navigator">
+        <a href="../pages/calculate-hypo.html">&#62;</a>
+      </div>
+    </header>
+    <main>
+      <section class="angles-triangles-leftSection">
+        <form id="check" class="angles-triangles-form">
+          <label class="input-label" for="">
+            <p>Enter first angle</p>
+            <input
+              class="input-text"
+              required
+              type="number"
+              id="first-angle"
+              min="0"
+              max="180"
+            />
+          </label>
+          <label class="input-label" for="">
+            <p>Enter second angle</p>
+            <input
+              class="input-text"
+              required
+              type="number"
+              id="second-angle"
+              min="0"
+              max="180"
+            />
+          </label>
+          <label class="input-label" for="">
+            <p>Enter third angle</p>
+            <input
+              class="input-text"
+              required
+              type="number"
+              id="third-angle"
+              min="0"
+              max="180"
+            />
+          </label>
+          <button class="btn-check" type="submit">Check</button>
+        </form>
+        <p id="output" class="output"></p>
+      </section>
+      <section>
+        <img
+          class="angles-triangles-img"
+          src="../images/angles-triangles.png"
+          alt="angles-triangles"
+        />
+      </section>
+    </main>
+    <footer>
+      <p>© | 2021 | adarshbalika</p>
+      <ul class="list-unordered inline-list">
+        <li>
+          <a class="links" href="https://github.com/neogcamp/" target="_blank">
+            <img src="../images/github.svg" alt="github" />
+          </a>
+        </li>
+        <li>
+          <a class="links" href="https://bit.ly/tanaydiscord" target="_blank">
+            <img src="../images/discord.svg" alt="discord" />
+          </a>
+        </li>
+        <li>
+          <a class="links" href="https://twitter.com/neogcamp" target="_blank">
+            <img src="../images/twitter.svg" alt="twitter" />
+          </a>
+        </li>
+        <li>
+          <a
+            class="links"
+            href="https://www.instagram.com/neogcamp"
+            target="_blank"
+          >
+            <img src="../images/instagram.svg" alt="instagram" />
+          </a>
+        </li>
+      </ul>
+    </footer>
+    <script src="../scripts/angles-triangles.js"></script>
+  </body>
+</html>
