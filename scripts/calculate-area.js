@@ -11,16 +11,24 @@ function calculateArea(e) {
   const secondSideValue = Number(secondSide.value);
   const thirdSideValue = Number(thirdSide.value);
 
-  const semiPerimeter = (firstSideValue + secondSideValue + thirdSideValue) / 2;
+  if (
+    firstSideValue + secondSideValue > thirdSideValue &&
+    secondSideValue + thirdSideValue > firstSideValue &&
+    firstSideValue + thirdSideValue > secondSideValue
+  ) {
+    const semiPerimeter =
+      (firstSideValue + secondSideValue + thirdSideValue) / 2;
 
-  const result = Math.sqrt(
-    semiPerimeter *
-      (semiPerimeter - firstSideValue) *
-      (semiPerimeter - secondSideValue) *
-      (semiPerimeter - thirdSideValue)
-  ).toFixed(4);
-
-  output.innerText = `Area of a triangle  is ${result} units`;
+    const result = Math.sqrt(
+      semiPerimeter *
+        (semiPerimeter - firstSideValue) *
+        (semiPerimeter - secondSideValue) *
+        (semiPerimeter - thirdSideValue)
+    ).toFixed(4);
+    output.innerText = `Area of a triangle using heron's formula is ${result} units`;
+  } else {
+    output.innerText = "Enter valid side lengths such that each side lengths";
+  }
 }
 
 calculate.addEventListener("submit", calculateArea);

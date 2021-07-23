@@ -4,8 +4,18 @@
   justify-content: space-evenly;
 }
 
+.calculate-area-leftSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .calculate-area-img {
   width: 600px;
+}
+
+.calculate-area-output {
+  width: 50%;
 }
 
 @media screen and (max-width: 1000px) {
@@ -16,5 +26,9 @@
 
   .calculate-area-img {
     width: 300px;
+  }
+
+  .calculate-area-output {
+    width: 90%;
   }
 }
