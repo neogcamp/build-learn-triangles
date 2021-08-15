@@ -1,18 +1,19 @@
-const base = document.querySelector("#base");
-const height = document.querySelector("#height");
-const calculate = document.querySelector("#calculate-hypo");
-const output = document.querySelector("#output");
+const sides = document.querySelectorAll(".side-input");
+const calculateBtn = document.querySelector("#calculate-hypotenuse-btn");
+const outputEl = document.querySelector(".output");
 
-function calculateHypo(e) {
-  e.preventDefault();
-  const baseValue = Number(base.value);
-  const heightValue = Number(height.value);
-
-  const result = Math.sqrt(
-    baseValue * baseValue + heightValue * heightValue
-  ).toFixed(4);
-
-  output.innerText = `Hypotenuse of a triangle with base ${baseValue} & height ${heightValue}  is ${result} units`;
+function calculateSumOfSquare(a, b) {
+  const sumOfSquares = a * a + b * b;
+  return sumOfSquares;
 }
 
-calculate.addEventListener("submit", calculateHypo);
+function calculateHypotenuse() {
+  const sumOfSquares = calculateSumOfSquare(
+    Number(sides[0].value),
+    Number(sides[1].value)
+  );
+  const lengthOfHypotenuse = Math.sqrt(sumOfSquares);
+  outputEl.innerText = "The length of hypotenuse is " + lengthOfHypotenuse;
+}
+
+calculateBtn.addEventListener("click", calculateHypotenuse);

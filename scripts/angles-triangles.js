@@ -1,21 +1,25 @@
-const firstAngle = document.querySelector("#first-angle");
-const secondAngle = document.querySelector("#second-angle");
-const thirdAngle = document.querySelector("#third-angle");
-const check = document.querySelector("#check");
-const output = document.querySelector("#output");
+const inputs = document.querySelectorAll(".angle-input");
+const isTriangleBtn = document.querySelector("#is-triangle-btn");
+const outputEl = document.querySelector(".output");
 
-function calcSumOfAngles(e) {
-  e.preventDefault();
-  const firstAngleValue = Number(firstAngle.value);
-  const secondAngleValue = Number(secondAngle.value);
-  const thirdAngleValue = Number(thirdAngle.value);
+function sumOfAngles(angle1, angle2, angle3) {
+  const sum = angle1 + angle2 + angle3;
+  return sum;
+}
 
-  const sumOfAngles = firstAngleValue + secondAngleValue + thirdAngleValue;
-  if (sumOfAngles === 180) {
-    output.innerText = `As sum of all angles equals to 180 degrees. Hence, angles form a traingle.`;
+function isTriangle() {
+  const sum = sumOfAngles(
+    Number(inputs[0].value),
+    Number(inputs[1].value),
+    Number(inputs[2].value)
+  );
+  if (sum === 180) {
+    console.log("Yay, the angles form a triangle!");
+    outputEl.innerText = "Yay, the angles form a triangle!";
   } else {
-    output.innerText = `As sum of all angles does not equals to 180 degrees. Hence, angles do not form a triangle`;
+    console.log("Oh Oh! The angle doesn't form a triangle");
+    outputEl.innerText = "Oh Oh! The angle doesn't form a triangle";
   }
 }
 
-check.addEventListener("submit", calcSumOfAngles);
+isTriangleBtn.addEventListener("click", isTriangle);

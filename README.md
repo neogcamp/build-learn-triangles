@@ -3,6 +3,9 @@
 A website which helps you to learn about triangles, contains quizzes & calculators.
 <br/>
 
+# Youtube Lesson
+[Link](https://youtu.be/xOaKv-6bJwE)
+
 # Problem Statement
 #### [**basics buildThree**](https://github.com/neogcamp/build/blob/main/basics/learn-triangles.md)
 

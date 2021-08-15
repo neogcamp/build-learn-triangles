@@ -11,65 +11,34 @@
       href="https://www.google.com/s2/u/0/favicons?domain=neog.camp"
     />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../styles/angles-triangles.css" />
   </head>
   <body>
     <header>
-      <div class="navigator">
-        <a href="../pages/calculate-area.html">&#60;</a>
-      </div>
-      <h1>Check whether angles form a triangle</h1>
-      <div class="navigator">
-        <a href="../pages/calculate-hypo.html">&#62;</a>
-      </div>
+      <h1>fun with triangles</h1>
+      <nav>
+        <a href="/">Is Triangle?</a>
+        <a href="../index.html">Quiz</a>
+        <a href="../pages/calculate-hypo.html">Hypotenuse</a>
+        <a href="../pages/calculate-area.html">Area of Triangle</a>
+      </nav>
     </header>
     <main class="angles-triangles-main">
-      <section class="angles-triangles-leftSection">
-        <form id="check" class="angles-triangles-form">
-          <label class="input-label" for="first-angle">
-            <p>Enter first angle</p>
-            <input
-              class="input-text"
-              required
-              type="number"
-              id="first-angle"
-              min="0"
-              max="180"
-            />
-          </label>
-          <label class="input-label" for="second-angle">
-            <p>Enter second angle</p>
-            <input
-              class="input-text"
-              required
-              type="number"
-              id="second-angle"
-              min="0"
-              max="180"
-            />
-          </label>
-          <label class="input-label" for="third-angle">
-            <p>Enter third angle</p>
-            <input
-              class="input-text"
-              required
-              type="number"
-              id="third-angle"
-              min="0"
-              max="180"
-            />
-          </label>
-          <button class="btn-check" type="submit">Check</button>
-        </form>
-        <p id="output" class="output"></p>
-      </section>
-      <section>
-        <img
-          class="angles-triangles-img"
-          src="../images/angles-triangles.png"
-          alt="angles-triangles"
-        />
-      </section>
+      <h1>Angles of triangles</h1>
+      <label class="input-label" for="Angle1">
+        <p>Angle1</p>
+      </label>
+      <input type="number" class="input-text angle-input" />
+      <label class="input-label" for="Angle2">
+        <p>Angle2</p>
+      </label>
+      <input type="number" class="input-text angle-input" />
+      <label class="input-label" for="Angle3">
+        <p>Angle3</p>
+      </label>
+      <input type="number" class="input-text angle-input" />
+      <button class="btn-check" id="is-triangle-btn">Is Triangle?</button>
+      <h2 class="output"></h2>
+      <p id="output" class="output"></p>
     </main>
     <footer>
       <p>© | 2021 | adarshbalika</p>

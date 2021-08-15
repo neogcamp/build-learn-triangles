@@ -1,46 +1,32 @@
-const quizForm = document.querySelector("#quiz-form");
-const questionContainer = document.querySelectorAll(".question-container");
-const output = document.querySelector("#output");
-const btnReset = document.querySelector("#btn-reset");
+const quizform = document.querySelector(".quiz-form");
+const submitBtn = document.querySelector("#submit-answers-btn");
+const outputEl = document.querySelector(".output");
 
-const correctAns = [
-  "option1",
-  "option2",
-  "option1",
-  "option1",
-  "option1",
-  "option1",
-  "option2",
-  "option3",
-  "option1",
-  "option3",
+const correctAnswers = [
+  "90°",
+  "right angled",
+  "one right angle",
+  "12, 16, 20",
+  "Equilateral triangle",
+  "100°",
+  "30°",
+  "a + b + c",
+  "no",
+  "45°",
 ];
 
-quizForm.addEventListener("submit", (e) => {
-  let score = 0;
-  e.preventDefault();
-  const data = new FormData(quizForm);
-  let index = 0;
-  for (let entry of data) {
-    if (entry[1] == correctAns[index]) {
-      questionContainer[index].style.backgroundColor = "#A7F3D0";
-      score++;
-    } else {
-      questionContainer[index].style.backgroundColor = "#FECACA";
+function calculateScore() {
+  const formResults = new FormData(quizform);
+  let score = 0,
+    index = 0;
+  for (let value of formResults.values()) {
+    if (value === correctAnswers[index]) {
+      score = score + 1;
     }
-    index++;
+    index = index + 1;
   }
-  if (score >= 4) {
-    output.innerText = `Congratulations, your score is ${score}`;
-  } else {
-    output.innerText = `Ohh no! Your score is ${score}`;
-  }
-});
+  // console.log("The score is "+score);
+  outputEl.innerText = "The score is " + score;
+}
 
-btnReset.addEventListener("click", () => {
-  let score = 0;
-  questionContainer.forEach((div) => {
-    div.style.backgroundColor = "inherit";
-  });
-  output.innerText = "";
-});
+submitBtn.addEventListener("click", calculateScore);

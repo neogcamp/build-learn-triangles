@@ -11,41 +11,33 @@
       href="https://www.google.com/s2/u/0/favicons?domain=neog.camp"
     />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../styles/calculate-hypo.css" />
   </head>
   <body>
     <header>
-      <div class="navigator">
-        <a href="../pages/angles-triangles.html">&#60;</a>
-      </div>
-      <h1>find out length of hypotenuse</h1>
-      <div class="navigator">
-        <a href="../index.html">&#62;</a>
-      </div>
+      <h1>fun with triangles</h1>
+      <nav>
+        <a href="../pages/angles-triangles.html">Is Triangle?</a>
+        <a href="../index.html">Quiz</a>
+        <a href="/">Hypotenuse</a>
+        <a href="../pages/calculate-area.html">Area of Triangle</a>
+      </nav>
     </header>
     <main class="calculate-hypo-main">
-      <section class="calculate-hypo-leftSection">
-        <form id="calculate-hypo">
-          <label class="input-label" for="base">
-            <p>Enter base value</p>
-            <input required class="input-text" type="number" id="base" />
-          </label>
-          <label class="input-label" for="height">
-            <p>Enter height value</p>
-            <input required class="input-text" type="number" id="height" />
-          </label>
-          <button class="btn-check" type="submit">Calculate</button>
-        </form>
-        <p id="output" class="output"></p>
-      </section>
-      <section class="calculate-hypo-rightSection">
-        <img
-          class="calculate-hypo-img"
-          src="../images/cal-hypo.jfif"
-          alt="cal-hypo"
-        />
-        <p>hypotenuse = √(base² + height²)</p>
-      </section>
+      <h1>Calculate Hypotenuse of a triangle</h1>
+      <label class="input-label" for="a"
+        ><p>Enter base value (a) =</p>
+        <input type="number" class="input-text side-input" />
+      </label>
+      <label class="input-label" for="b">
+        <p>Enter height value (b) =</p>
+        <input type="number" class="input-text side-input" />
+      </label>
+      <button class="btn-check" id="calculate-hypotenuse-btn">
+        Calculate hypotenuse
+      </button>
+      <h1>Hypotenuse formula</h1>
+      <h3>√(base² + height²)</h3>
+      <h2 class="output"></h2>
     </main>
     <footer>
       <p>© | 2021 | adarshbalika</p>

@@ -11,46 +11,35 @@
       href="https://www.google.com/s2/u/0/favicons?domain=neog.camp"
     />
     <link rel="stylesheet" href="../style.css" />
-    <link rel="stylesheet" href="../styles/calculate-area.css" />
   </head>
   <body>
     <header>
-      <header>
-        <div class="navigator">
-          <a href="../pages/quiz.html">&#60;</a>
-        </div>
-        <h1>Calculate area of a triangle</h1>
-        <div class="navigator">
-          <a href="../pages/angles-triangles.html">&#62;</a>
-        </div>
-      </header>
+      <h1>fun with triangles</h1>
+      <nav>
+        <a href="../pages/angles-triangles.html">Is Triangle?</a>
+        <a href="../index.html">Quiz</a>
+        <a href="../pages/calculate-hypo.html">Hypotenuse</a>
+        <a href="/">Area of Triangle</a>
+      </nav>
     </header>
     <main class="calculate-area-main">
-      <section class="calculate-area-leftSection">
-        <form id="calculate-area">
-          <label class="input-label" for="first-side">
-            <p>Enter first side of a triangle</p>
-            <input class="input-text" required type="number" id="first-side" />
-          </label>
-          <label class="input-label" for="second-side">
-            <p>Enter second side of a triangle</p>
-            <input class="input-text" required type="number" id="second-side" />
-          </label>
-          <label class="input-label" for="third-side">
-            <p>Enter third side of a triangle</p>
-            <input class="input-text" required type="number" id="third-side" />
-          </label>
-          <button class="btn-check" type="submit">Calculate</button>
-        </form>
-        <p class="output calculate-area-output" id="output"></p>
-      </section>
-      <section>
-        <img
-          class="calculate-area-img"
-          src="../images/cal-area.png"
-          alt="cal-area"
-        />
-      </section>
+      <h1>Calculate Area of a triangle</h1>
+      <form id="calculate-area">
+        <label class="input-label" for="first-side">
+          <p>Enter first side of a triangle</p>
+          <input class="input-text" required type="number" id="first-side" />
+        </label>
+        <label class="input-label" for="second-side">
+          <p>Enter second side of a triangle</p>
+          <input class="input-text" required type="number" id="second-side" />
+        </label>
+        <label class="input-label" for="third-side">
+          <p>Enter third side of a triangle</p>
+          <input class="input-text" required type="number" id="third-side" />
+        </label>
+        <button class="btn-check" type="submit">Calculate</button>
+      </form>
+      <p class="output calculate-area-output" id="output"></p>
     </main>
     <footer>
       <p>© | 2021 | adarshbalika</p>
