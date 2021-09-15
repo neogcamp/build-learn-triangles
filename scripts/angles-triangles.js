@@ -13,7 +13,12 @@ function isTriangle() {
     Number(inputs[1].value),
     Number(inputs[2].value)
   );
-  if (sum === 180) {
+  if (
+    sum === 180 &&
+    inputs[0].value > 0 &&
+    inputs[1].value > 0 &&
+    inputs[2].value > 0
+  ) {
     console.log("Yay, the angles form a triangle!");
     outputEl.innerText = "Yay, the angles form a triangle!";
   } else {
